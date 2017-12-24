@@ -9,7 +9,7 @@ public class dayTwo {
 	public static void main(String[] args) {
 		dayTwo day = new dayTwo();
 
-		System.out.println("part 1" + day.partOne(day.input));
+		System.out.println("part 1 " + day.partOne(day.input));
 
 		System.out.println("part 2 " + day.partTwo(day.input));
 
@@ -21,8 +21,8 @@ public class dayTwo {
 			line = line.trim().replaceAll(" +", " ");
 			ArrayList<Integer> nums = new ArrayList<>();
 			while (!line.trim().isEmpty()) {
-				nums.add(Integer.parseInt(line.substring(0, line.indexOf(" "))));
-				line = line.substring(line.indexOf(" ")).trim() + " ";
+				nums.add(Integer.parseInt(line.substring(0, line.indexOf("	"))));
+				line = line.substring(line.indexOf("	")).trim() + "	";
 			}
 
 			int highest = nums.get(0), lowest = nums.get(0);
@@ -48,8 +48,8 @@ public class dayTwo {
 			line = line.trim().replaceAll(" +", " ");
 			ArrayList<Integer> nums = new ArrayList<>();
 			while (!line.trim().isEmpty()) {
-				nums.add(Integer.parseInt(line.substring(0, line.indexOf(" "))));
-				line = line.substring(line.indexOf(" ")).trim() + " ";
+				nums.add(Integer.parseInt(line.substring(0, line.indexOf("	"))));
+				line = line.substring(line.indexOf("	")).trim() + "	";
 			}
 
 			for (int i = 0; i < nums.size() - 1; i++) {
